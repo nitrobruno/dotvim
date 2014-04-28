@@ -19,3 +19,29 @@ else
         set guifont=Liberation_Mono:h10
     endif
 endif
+
+" vim-colors-solarized plugin configuration
+if has('gui_running')
+    set background=dark
+    let g:solarized_menu=0
+    colorscheme solarized
+    call togglebg#map("<F5>")
+else
+    " TODO Make it work in gnome-terminal
+    " set background=dark
+    " colorscheme solarized
+endif
+
+" vim-session plugin configuration
+let g:session_autosave='yes'
+let g:session_autoload='no'
+
+" tagbar plugin configuration
+let g:tagbar_autoclose=1
+nnoremap <silent> <C-L> :TagbarToggle<CR>
+
+" surround plugin configuration
+let g:surround_{char2nr('/')} = "/* \r */"
+
+" control-p plugin configuration
+let g:ctrlp_open_new_file = 'h'
