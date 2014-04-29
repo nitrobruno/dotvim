@@ -27,9 +27,10 @@ if has('gui_running')
     colorscheme solarized
     call togglebg#map("<F5>")
 else
-    " TODO Make it work in gnome-terminal
-    " set background=dark
-    " colorscheme solarized
+    " To make it work in gnome-terminal, use:
+    " https://github.com/sigurdga/gnome-terminal-colors-solarized.git
+    set background=dark
+    colorscheme solarized
 endif
 
 " vim-session plugin configuration
