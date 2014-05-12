@@ -34,3 +34,6 @@
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "bundle/bitbake"]
+	path = bundle/bitbake
+	url = https://github.com/kergoth/vim-bitbake.git
