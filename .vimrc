@@ -6,6 +6,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 set nowrap
+set mouse=a
 if has('gui_running')
     set guioptions-=mrLtT " Default: aegimrLtT
 endif
