@@ -7,6 +7,7 @@ syntax on
 filetype plugin indent on
 set nowrap
 set mouse=a
+set tabstop=8 softtabstop=0 shiftwidth=4 expandtab
 if has('gui_running')
     set guioptions-=mrLtT " Default: aegimrLtT
 endif
