@@ -6,6 +6,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 set nowrap
+set linebreak
 set mouse=a
 set tabstop=8 softtabstop=0 shiftwidth=4 expandtab
 if has('gui_running')
@@ -48,3 +49,7 @@ let g:surround_{char2nr('/')} = "/* \r */"
 
 " control-p plugin configuration
 let g:ctrlp_open_new_file = 'h'
+let g:ctrlp_custom_ignore = {
+            \ 'file': '\v\.o$' ,
+            \ }
+
