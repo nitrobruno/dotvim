@@ -10,10 +10,6 @@
 	path = bundle/session
 	url = https://github.com/xolox/vim-session.git
 	branch = master
-[submodule "bundle/ctrlp"]
-	path = bundle/ctrlp
-	url = https://github.com/kien/ctrlp.vim.git
-	branch = master
 [submodule "bundle/sensible"]
 	path = bundle/sensible
 	url = https://github.com/tpope/vim-sensible.git
