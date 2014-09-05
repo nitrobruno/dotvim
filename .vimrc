@@ -52,4 +52,4 @@ let g:ctrlp_open_new_file = 'h'
 let g:ctrlp_custom_ignore = {
             \ 'file': '\v\.o$' ,
             \ }
-
+let g:ctrlp_root_markers = ['.top']
