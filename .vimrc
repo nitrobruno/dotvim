@@ -5,8 +5,11 @@ execute pathogen#infect()
 " Misc.
 syntax on
 filetype plugin indent on
+set modeline
+set modelines=1
 set nowrap
 set linebreak
+set colorcolumn=+1
 set mouse=a
 set tabstop=8 softtabstop=0 shiftwidth=4 expandtab
 if has('gui_running')
@@ -27,6 +30,7 @@ endif
 if has('gui_running')
     set background=dark
     let g:solarized_menu=0
+    let g:solarized_italic=0
     colorscheme solarized
     call togglebg#map("<F5>")
 else
