@@ -54,6 +54,6 @@ let g:surround_{char2nr('/')} = "/* \r */"
 " control-p plugin configuration
 let g:ctrlp_open_new_file = 'h'
 let g:ctrlp_custom_ignore = {
-            \ 'file': '\v\.o$' ,
+            \ 'file': '\v\.(o|d)$' ,
             \ }
 let g:ctrlp_root_markers = ['.top']
