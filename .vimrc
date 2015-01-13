@@ -12,6 +12,7 @@ set linebreak
 set colorcolumn=+1
 set mouse=a
 set tabstop=8 softtabstop=0 shiftwidth=4 expandtab
+set noequalalways
 if has('gui_running')
     set guioptions-=mrLtT " Default: aegimrLtT
 endif
@@ -57,3 +58,4 @@ let g:ctrlp_custom_ignore = {
             \ 'file': '\v\.(o|d)$' ,
             \ }
 let g:ctrlp_root_markers = ['.top']
+let g:ctrlp_match_window = 'results:100'
