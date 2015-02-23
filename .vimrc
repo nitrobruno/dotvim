@@ -13,6 +13,7 @@ set colorcolumn=+1
 set mouse=a
 set tabstop=8 softtabstop=0 shiftwidth=4 expandtab
 set noequalalways
+let mapleader=","
 if has('gui_running')
     set guioptions-=mrLtT " Default: aegimrLtT
 endif
@@ -27,8 +28,18 @@ else
     endif
 endif
 
+" Easy .vimrc modification
+nnoremap <leader>ev :edit $MYVIMRC<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
+
+" Quick spell check toggles
+nnoremap <silent> <leader>s :set spell!<CR>
+nnoremap <silent> <leader>sen :set spell spelllang=en<CR>
+nnoremap <silent> <leader>sfr :set spell spelllang=fr<CR>
+
 " netrw plugin configuration
 let g:netrw_preview=1
+let g:netrw_sort_options="i"
 
 " vim-colors-solarized plugin configuration
 if has('gui_running')
