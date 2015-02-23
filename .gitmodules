@@ -58,3 +58,7 @@
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
 	branch = master
+[submodule "bundle/vinegar"]
+	path = bundle/vinegar
+	url = https://github.com/tpope/vim-vinegar.git
+	branch = master
