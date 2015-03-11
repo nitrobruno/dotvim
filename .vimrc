@@ -13,10 +13,9 @@ set colorcolumn=+1
 set mouse=a
 set tabstop=8 softtabstop=0 shiftwidth=4 expandtab
 set noequalalways
+set guioptions-=mrLtT " Default: aegimrLtT
+
 let mapleader=","
-if has('gui_running')
-    set guioptions-=mrLtT " Default: aegimrLtT
-endif
 
 if has('unix')
     " Linux specific configuration
@@ -41,7 +40,7 @@ nnoremap <silent> <leader>sfr :set spell spelllang=fr<CR>
 let g:netrw_preview=1
 let g:netrw_sort_options="i"
 
-" vim-colors-solarized plugin configuration
+" solarized plugin configuration
 if has('gui_running')
     set background=dark
     let g:solarized_menu=0
@@ -55,9 +54,11 @@ else
     " colorscheme solarized
 endif
 
-" vim-session plugin configuration
+" session plugin configuration
+set sessionoptions-=help
 let g:session_autosave='yes'
 let g:session_autoload='no'
+let g:session_persist_colors=0
 
 " tagbar plugin configuration
 let g:tagbar_autoclose=1
