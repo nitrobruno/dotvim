@@ -42,10 +42,6 @@
 	path = bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
 	branch = master
-[submodule "bundle/bitbake"]
-	path = bundle/bitbake
-	url = https://github.com/kergoth/vim-bitbake.git
-	branch = master
 [submodule "bundle/qml"]
 	path = bundle/qml
 	url = https://github.com/peterhoeg/vim-qml.git
