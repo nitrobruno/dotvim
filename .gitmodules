@@ -62,3 +62,11 @@
 	path = bundle/dockerfile
 	url = https://github.com/honza/dockerfile.vim.git
 	branch = master
+[submodule "bundle/windowswap"]
+	path = bundle/windowswap
+	url = https://github.com/wesQ3/vim-windowswap.git
+	branch = master
+[submodule "bundle/lightline"]
+	path = bundle/lightline
+	url = https://github.com/itchyny/lightline.vim.git
+	branch = master

@@ -12,7 +12,7 @@ set linebreak
 set colorcolumn=+1
 set mouse=a
 set tabstop=8 softtabstop=0 shiftwidth=4 expandtab
-set noequalalways
+set noequalalways " Do not resize windows automatically
 set guioptions-=mrLtT " Default: aegimrLtT
 
 let mapleader=","
@@ -40,9 +40,123 @@ nnoremap <silent> <leader>sfr :set spell spelllang=fr<CR>
 let g:netrw_preview=1
 let g:netrw_sort_options="i"
 
+" lightline plugin configuration
+let g:lightline = {
+        \ 'colorscheme' : 'solarized',
+        \ 'active': {
+        \     'left': [ 
+        \         [ 'mode', 'paste' ],
+        \         [ 'readonly', 'filename', 'modified' ],
+        \         [ 'ctrlpmark']
+        \     ],
+        \     'right': [
+        \         [ 'lineinfo' ],
+        \         [ 'percent' ],
+        \         [ 'fileformat', 'fileencoding', 'filetype' ]
+        \     ]
+        \ },
+        \ 'inactive': {
+        \     'left': [ [ 'relativepath', 'modified'  ] ],
+        \     'right': [ [ 'lineinfo' ], [ 'percent' ] ]
+        \ },
+        \ 'component_function': {
+        \     'readonly': 'MyReadonly',
+        \     'filename': 'MyFilename',
+        \     'modified': 'MyModified',
+        \     'fileformat': 'MyFileformat',
+        \     'filetype': 'MyFiletype',
+        \     'fileencoding': 'MyFileencoding',
+        \     'mode': 'MyMode',
+        \     'ctrlpmark': 'CtrlPMark'
+        \ }
+\ }
+
+function! MyModified()
+    if &filetype == "help"
+        return ""
+    elseif &modified
+        return "+"
+    elseif &modifiable
+        return ""
+    else
+        return ""
+    endif
+endfunction
+
+function! MyReadonly()
+    if &filetype == "help"
+        return ""
+    elseif &readonly
+        return "RO"
+    else
+        return ""
+    endif
+endfunction
+
+function MyFilename()
+    let fname = expand('%:t')
+    return fname == 'ControlP' ? g:lightline.ctrlp_item :
+                \ fname == '__Tagbar__' ? g:lightline.fname :
+                \ ('' != fname ? fname : '[No Name]')
+endfunction
+
+function! MyFileformat()
+    return winwidth(0) > 70 ? &fileformat : ''
+endfunction
+
+function! MyFiletype()
+    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
+endfunction
+
+function! MyFileencoding()
+    return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
+endfunction
+
+function! MyMode()
+    let fname = expand('%:t')
+    return fname == '__Tagbar__' ? 'Tagbar' :
+                \ fname == 'ControlP' ? 'CtrlP' :
+                \  winwidth(0) > 60 ? lightline#mode() : ''
+endfunction
+
+function! CtrlPMark()
+    if expand('%:t') =~ 'ControlP'
+        call lightline#link('iR'[g:lightline.ctrlp_regex])
+        return lightline#concatenate([g:lightline.ctrlp_prev, g:lightline.ctrlp_item
+                    \ , g:lightline.ctrlp_next], 0)
+    else
+        return ''
+    endif
+endfunction
+
+let g:ctrlp_status_func = {
+            \ 'main': 'CtrlPStatusFunc_1',
+            \ 'prog': 'CtrlPStatusFunc_2',
+            \ }
+
+function! CtrlPStatusFunc_1(focus, byfname, regex, prev, item, next, marked)
+    let g:lightline.ctrlp_regex = a:regex
+    let g:lightline.ctrlp_prev = a:prev
+    let g:lightline.ctrlp_item = a:item
+    let g:lightline.ctrlp_next = a:next
+    return lightline#statusline(0)
+endfunction
+
+function! CtrlPStatusFunc_2(str)
+    return lightline#statusline(0)
+endfunction
+
+let g:tagbar_status_func = 'TagbarStatusFunc'
+
+function! TagbarStatusFunc(current, sort, fname, ...) abort
+    let g:lightline.fname = a:fname
+    return lightline#statusline(0)
+endfunction
+
 " solarized plugin configuration
 if has('gui_running')
     set background=dark
+
     let g:solarized_menu=0
     let g:solarized_italic=0
     colorscheme solarized
