@@ -29,7 +29,7 @@ endif
 
 " Easy .vimrc modification
 nnoremap <leader>ev :edit $MYVIMRC<CR>
-nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>lv :source $MYVIMRC<CR>
 
 " Quick spell check toggles
 nnoremap <silent> <leader>s :set spell!<CR>
@@ -154,18 +154,12 @@ function! TagbarStatusFunc(current, sort, fname, ...) abort
 endfunction
 
 " solarized plugin configuration
+set background=dark
+colorscheme solarized
 if has('gui_running')
-    set background=dark
-
     let g:solarized_menu=0
     let g:solarized_italic=0
-    colorscheme solarized
     call togglebg#map("<F5>")
-else
-    " " To make it work in gnome-terminal, use:
-    " " https://github.com/sigurdga/gnome-terminal-colors-solarized.git
-    " set background=dark
-    " colorscheme solarized
 endif
 
 " session plugin configuration
@@ -182,6 +176,7 @@ nnoremap <silent> <C-L> :TagbarToggle<CR>
 let g:surround_{char2nr('/')} = "/* \r */"
 
 " control-p plugin configuration
+let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_open_new_file = 'h'
 let g:ctrlp_custom_ignore = {
             \ 'file': '\v\.(o|d|elf|map)$' ,
