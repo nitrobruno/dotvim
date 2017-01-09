@@ -31,6 +31,9 @@ endif
 nnoremap <leader>ev :edit $MYVIMRC<CR>
 nnoremap <leader>lv :source $MYVIMRC<CR>
 
+" Change to the directory of the currently open file
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+
 " Quick spell check toggles
 nnoremap <silent> <leader>s :set spell!<CR>
 nnoremap <silent> <leader>sen :set spell spelllang=en<CR>
@@ -46,7 +49,7 @@ let g:lightline = {
         \ 'active': {
         \     'left': [ 
         \         [ 'mode', 'paste' ],
-        \         [ 'readonly', 'filename', 'modified' ],
+        \         [ 'readonly', 'relativepath', 'modified' ],
         \         [ 'ctrlpmark']
         \     ],
         \     'right': [
