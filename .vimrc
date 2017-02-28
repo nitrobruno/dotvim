@@ -15,6 +15,10 @@ set tabstop=8 softtabstop=0 shiftwidth=4 expandtab
 set noequalalways " Do not resize windows automatically
 set guioptions-=mrLtT " Default: aegimrLtT
 
+" Diff related options
+set diffopt=filler,vertical
+set scrollbind
+
 let mapleader=","
 
 if has('unix')
