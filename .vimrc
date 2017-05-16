@@ -15,10 +15,6 @@ set tabstop=8 softtabstop=0 shiftwidth=4 expandtab
 set noequalalways " Do not resize windows automatically
 set guioptions-=mrLtT " Default: aegimrLtT
 
-" Diff related options
-set diffopt=filler,vertical
-set scrollbind
-
 let mapleader=","
 
 if has('unix')
@@ -53,7 +49,7 @@ let g:lightline = {
         \ 'active': {
         \     'left': [ 
         \         [ 'mode', 'paste' ],
-        \         [ 'readonly', 'relativepath', 'modified' ],
+        \         [ 'fugitive', 'readonly', 'relativepath', 'modified' ],
         \         [ 'ctrlpmark']
         \     ],
         \     'right': [
@@ -74,7 +70,8 @@ let g:lightline = {
         \     'filetype': 'MyFiletype',
         \     'fileencoding': 'MyFileencoding',
         \     'mode': 'MyMode',
-        \     'ctrlpmark': 'CtrlPMark'
+        \     'ctrlpmark': 'CtrlPMark',
+        \     'fugitive': 'LightLineFugitive'
         \ }
 \ }
 
@@ -160,6 +157,14 @@ function! TagbarStatusFunc(current, sort, fname, ...) abort
     return lightline#statusline(0)
 endfunction
 
+function! LightLineFugitive()
+    let max_size=16
+    let branch=exists('*fugitive#head') ? fugitive#head() : ''
+    return strchars(branch) > max_size ? substitute(branch, '.\{16\}\zs.*','…','') : branch
+    " return exists('*fugitive#head') ? fugitive#head() : ''
+    return branch
+endfunction
+
 " solarized plugin configuration
 set background=dark
 colorscheme solarized
@@ -190,3 +195,6 @@ let g:ctrlp_custom_ignore = {
             \ }
 let g:ctrlp_root_markers = ['.top']
 let g:ctrlp_match_window = 'results:100'
+
+" fugitive plugin configuration
+let g:fugitive_git_executable = 'LANGUAGE=en_US.UTF-8 git'
