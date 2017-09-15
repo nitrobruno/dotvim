@@ -19,11 +19,14 @@ let mapleader=","
 
 if has('unix')
     " Linux specific configuration
+    if has('gui_running')
+        set guifont=Source\ Code\ Pro\ 10
+    endif
 else
     " Windows specific configuration
     set encoding=utf-8
     if has('gui_running')
-        set guifont=Liberation_Mono:h10
+        set guifont=Source_Code_Pro:h10
     endif
 endif
 
@@ -38,6 +41,10 @@ nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 nnoremap <silent> <leader>s :set spell!<CR>
 nnoremap <silent> <leader>sen :set spell spelllang=en<CR>
 nnoremap <silent> <leader>sfr :set spell spelllang=fr<CR>
+
+" Easily convert file line endings
+nnoremap <silent> <leader>ffu :e ++ff=unix<CR>
+nnoremap <silent> <leader>ffd :e ++ff=dos<CR>
 
 " netrw plugin configuration
 let g:netrw_preview=1
