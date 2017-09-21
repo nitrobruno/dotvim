@@ -200,9 +200,7 @@ let g:surround_{char2nr('/')} = "/* \r */"
 " control-p plugin configuration
 let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_open_new_file = 'h'
-let g:ctrlp_custom_ignore = {
-            \ 'file': '\v\.(o|d|elf|map)$' ,
-            \ }
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let g:ctrlp_root_markers = ['.top']
 let g:ctrlp_match_window = 'results:100'
 
