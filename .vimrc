@@ -205,3 +205,12 @@ let g:ctrlp_match_window = 'results:100'
 
 " fugitive plugin configuration
 let g:fugitive_git_executable = 'LANGUAGE=en_US.UTF-8 git'
+
+" easygrep plugin configuration
+let g:EasyGrepRoot = "search:.git"
+" let g:EasyGrepMode = "2"
+let g:EasyGrepCommand = "git"
+let g:EasyGrepWindowPosition = "botright" " Bottom, full width
+let g:EasyGrepJumpToMatch = "0" " Do not jump to first match
+let g:EasyGrepInvertWholeWord = "1" " <leader>vv matches whole word
+" let g:EasyGrepReplaceWindowMode = "2" " Do not open windows when replacing
