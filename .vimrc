@@ -46,6 +46,9 @@ nnoremap <silent> <leader>sfr :set spell spelllang=fr<CR>
 nnoremap <silent> <leader>ffu :e ++ff=unix<CR>
 nnoremap <silent> <leader>ffd :e ++ff=dos<CR>
 
+" Easily close quickfix window
+nnoremap <silent> <leader>, :cclose<CR>
+
 " netrw plugin configuration
 let g:netrw_preview=1
 let g:netrw_sort_options="i"
