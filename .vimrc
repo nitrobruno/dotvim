@@ -215,3 +215,10 @@ let g:EasyGrepWindowPosition = "botright" " Bottom, full width
 let g:EasyGrepJumpToMatch = "0" " Do not jump to first match
 let g:EasyGrepInvertWholeWord = "1" " <leader>vv matches whole word
 " let g:EasyGrepReplaceWindowMode = "2" " Do not open windows when replacing
+
+" QFEnter plugin configuration
+let g:qfenter_keymap = {}
+let g:qfenter_keymap.vopen = ['<C-v>']
+let g:qfenter_keymap.hopen = ['<C-x>']
+let g:qfenter_keymap.topen = ['<C-t>']
+
