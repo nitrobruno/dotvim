@@ -22,13 +22,13 @@ let mapleader=","
 if has('unix')
     " Linux specific configuration
     if has('gui_running')
-        set guifont=Source\ Code\ Pro\ 10
+        set guifont=Source\ Code\ Pro\ 11
     endif
 else
     " Windows specific configuration
     set encoding=utf-8
     if has('gui_running')
-        set guifont=Source_Code_Pro:h10
+        set guifont=Source_Code_Pro:h11
     endif
 endif
 
