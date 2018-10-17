@@ -10,6 +10,8 @@ set modelines=1
 set nowrap
 set linebreak
 set colorcolumn=+1
+set textwidth=90
+
 set mouse=a
 set tabstop=8 softtabstop=0 shiftwidth=4 expandtab
 set noequalalways " Do not resize windows automatically
