@@ -58,10 +58,6 @@
 	path = bundle/vinegar
 	url = https://github.com/tpope/vim-vinegar.git
 	branch = master
-[submodule "bundle/dockerfile"]
-	path = bundle/dockerfile
-	url = https://github.com/honza/dockerfile.vim.git
-	branch = master
 [submodule "bundle/windowswap"]
 	path = bundle/windowswap
 	url = https://github.com/wesQ3/vim-windowswap.git
