@@ -32,6 +32,9 @@ else
     endif
 endif
 
+" Disable built-in help key
+nnoremap <F1> <nop>
+
 " Easy .vimrc modification
 nnoremap <leader>ev :edit $MYVIMRC<CR>
 nnoremap <leader>lv :source $MYVIMRC<CR>
