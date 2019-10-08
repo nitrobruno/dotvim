@@ -78,3 +78,9 @@
 [submodule "bundle/qfenter"]
 	path = bundle/qfenter
 	url = https://github.com/yssl/QFEnter.git
+[submodule "bundle/sneak"]
+	path = bundle/sneak
+	url = https://github.com/justinmk/vim-sneak.git
+[submodule "bundle/black"]
+	path = bundle/black
+	url = https://github.com/python/black
