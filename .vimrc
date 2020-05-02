@@ -1,7 +1,3 @@
-" pathogen configuration
-runtime bundle/pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-
 " Misc.
 syntax on
 filetype plugin indent on
