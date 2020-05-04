@@ -184,12 +184,6 @@ if has('gui_running')
     call togglebg#map("<F5>")
 endif
 
-" session plugin configuration
-set sessionoptions-=help
-let g:session_autosave='yes'
-let g:session_autoload='no'
-let g:session_persist_colors=0
-
 " tagbar plugin configuration
 let g:tagbar_autoclose=1
 nnoremap <silent> <C-L> :TagbarToggle<CR>
