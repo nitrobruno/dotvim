@@ -1,11 +1,3 @@
-[submodule "pack/mypackages/start/misc"]
-	path = pack/mypackages/start/misc
-	url = https://github.com/xolox/vim-misc.git
-	branch = master
-[submodule "pack/mypackages/start/session"]
-	path = pack/mypackages/start/session
-	url = https://github.com/xolox/vim-session.git
-	branch = master
 [submodule "pack/mypackages/start/sensible"]
 	path = pack/mypackages/start/sensible
 	url = https://github.com/tpope/vim-sensible.git
@@ -45,10 +37,6 @@
 [submodule "pack/mypackages/start/ctrlp"]
 	path = pack/mypackages/start/ctrlp
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
-	branch = master
-[submodule "pack/mypackages/start/ack"]
-	path = pack/mypackages/start/ack
-	url = https://github.com/mileszs/ack.vim.git
 	branch = master
 [submodule "pack/mypackages/start/vinegar"]
 	path = pack/mypackages/start/vinegar
