@@ -78,3 +78,7 @@
 	path = pack/mypackages/start/speeddating
 	url = https://github.com/tpope/vim-speeddating.git
 	branch = master
+[submodule "pack/mypackages/start/nerdtree"]
+	path = pack/mypackages/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+	branch = master
