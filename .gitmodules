@@ -76,5 +76,5 @@
 	branch = master
 [submodule "pack/mypackages/start/speeddating"]
 	path = pack/mypackages/start/speeddating
-	url = https://tpope.io/vim/speeddating.git
+	url = https://github.com/tpope/vim-speeddating.git
 	branch = master
