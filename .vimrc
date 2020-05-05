@@ -218,3 +218,7 @@ let g:qfenter_keymap.topen = ['<C-t>']
 
 " Markdown plugin configuration
 let g:markdown_fenced_languages = ['html']
+
+" Sneak plugin configuration
+let g:sneak#s_next = 1 " Enable sneak-clever-s
+let g:sneak#use_ic_scs = 1 " Case sensitive
