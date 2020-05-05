@@ -43,7 +43,7 @@
 	url = https://github.com/tpope/vim-vinegar.git
 	branch = master
 [submodule "pack/mypackages/start/windowswap"]
-	path = pack/mypackages/start/windowswap
+	path = pack/mypackages/opt/windowswap
 	url = https://github.com/wesQ3/vim-windowswap.git
 	branch = master
 [submodule "pack/mypackages/start/lightline"]
@@ -63,7 +63,7 @@
 	url = https://github.com/dkprice/vim-easygrep.git
 	branch = master
 [submodule "pack/mypackages/start/qfenter"]
-	path = pack/mypackages/start/qfenter
+	path = pack/mypackages/opt/qfenter
 	url = https://github.com/yssl/QFEnter.git
 	branch = master
 [submodule "pack/mypackages/start/sneak"]
