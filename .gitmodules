@@ -66,3 +66,9 @@
 	path = pack/mypackages/start/sneak
 	url = https://github.com/justinmk/vim-sneak.git
 	url = https://github.com/python/black
+[submodule "pack/mypackages/start/obsession"]
+	path = pack/mypackages/start/obsession
+	url = https://github.com/tpope/vim-obsession.git
+[submodule "pack/mypackages/start/speeddating"]
+	path = pack/mypackages/start/speeddating
+	url = https://tpope.io/vim/speeddating.git
