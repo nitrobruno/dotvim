@@ -53,22 +53,28 @@
 [submodule "pack/mypackages/start/fugitive"]
 	path = pack/mypackages/start/fugitive
 	url = http://github.com/tpope/vim-fugitive.git
+	branch = master
 [submodule "pack/mypackages/start/markdown"]
 	path = pack/mypackages/start/markdown
 	url = https://github.com/tpope/vim-markdown.git
+	branch = master
 [submodule "pack/mypackages/start/easygrep"]
 	path = pack/mypackages/start/easygrep
 	url = https://github.com/dkprice/vim-easygrep.git
+	branch = master
 [submodule "pack/mypackages/start/qfenter"]
 	path = pack/mypackages/start/qfenter
 	url = https://github.com/yssl/QFEnter.git
+	branch = master
 [submodule "pack/mypackages/start/sneak"]
 	path = pack/mypackages/start/sneak
 	url = https://github.com/justinmk/vim-sneak.git
-	url = https://github.com/python/black
+	branch = master
 [submodule "pack/mypackages/start/obsession"]
 	path = pack/mypackages/start/obsession
 	url = https://github.com/tpope/vim-obsession.git
+	branch = master
 [submodule "pack/mypackages/start/speeddating"]
 	path = pack/mypackages/start/speeddating
 	url = https://tpope.io/vim/speeddating.git
+	branch = master
