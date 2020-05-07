@@ -12,6 +12,8 @@ set mouse=a
 set tabstop=8 softtabstop=0 shiftwidth=4 expandtab
 set guioptions-=mrLtT " Default: aegimrLtT
 
+set title titlestring=%t\ %m\ %{ObsessionStatus()}
+
 let mapleader=","
 
 if has('unix')
