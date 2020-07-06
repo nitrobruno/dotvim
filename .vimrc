@@ -7,6 +7,8 @@ set nowrap
 set linebreak
 set colorcolumn=+1
 set textwidth=88
+set ignorecase
+set smartcase
 
 set mouse=a
 set tabstop=8 softtabstop=0 shiftwidth=4 expandtab
