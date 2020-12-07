@@ -10,7 +10,7 @@ set textwidth=88
 set ignorecase
 set smartcase
 
-set mouse=a
+set mouse=r
 set tabstop=8 softtabstop=0 shiftwidth=4 expandtab
 set guioptions-=mrLtT " Default: aegimrLtT
 
