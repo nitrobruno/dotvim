@@ -10,7 +10,6 @@ set textwidth=88
 set ignorecase
 set smartcase
 
-set mouse=r
 set tabstop=8 softtabstop=0 shiftwidth=4 expandtab
 set guioptions-=mrLtT " Default: aegimrLtT
 
@@ -180,7 +179,6 @@ function! LightLineFugitive()
 endfunction
 
 " solarized plugin configuration
-set background=dark
 colorscheme solarized
 if has('gui_running')
     let g:solarized_menu=0
